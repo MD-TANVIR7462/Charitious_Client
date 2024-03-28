@@ -7,6 +7,7 @@ import DashboardHome from "@/pages/AdminPages/DashboardHome";
 import AllRelifPage from "@/pages/AllRelifPage";
 import DetailsPage from "@/pages/DetailsPage";
 import HomePage from "@/pages/HomePage";
+import LeaderBoardPage from "@/pages/LeaderBoardPage";
 import LoginPage from "@/pages/LoginPage";
 import SignUpPage from "@/pages/SignUpPage";
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:"/login",
         element:<LoginPage/>,
+      },
+      {
+        path:"/leaderboard",
+        element:<LeaderBoardPage/>,
       },
   
       {

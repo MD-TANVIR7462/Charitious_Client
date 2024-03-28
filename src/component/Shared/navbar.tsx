@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { logOut, userCurrentToken } from "@/redux/features/auth/authSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hook";
 import { useState } from "react";
@@ -6,7 +7,7 @@ import { Codesandbox } from "lucide-react";
 import toast from "react-hot-toast";
 import { ModeToggle } from "./ModeToggle";
 
-const Navbar = ({ setTheme }) => {
+const Navbar = ({ setTheme }:any) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const accessToken = useAppSelector(userCurrentToken);
   const navigate = useNavigate();
@@ -74,6 +75,11 @@ const Navbar = ({ setTheme }) => {
             <Link to="/relief-goods">
               <a href="" className="block px-3 py-2" aria-current="page">
                 All Relief
+              </a>
+            </Link>
+            <Link to="/leaderboard">
+              <a href="" className="block px-3 py-2" aria-current="page">
+                Leader Board
               </a>
             </Link>
             {!accessToken ? (
