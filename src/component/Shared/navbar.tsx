@@ -77,6 +77,11 @@ const Navbar = ({ setTheme }:any) => {
                 All Relief
               </a>
             </Link>
+            <Link to="/volunteer">
+              <a href="" className="block px-3 py-2" aria-current="page">
+              Volunteer
+              </a>
+            </Link>
             <Link to="/leaderboard">
               <a href="" className="block px-3 py-2" aria-current="page">
                 Leader Board

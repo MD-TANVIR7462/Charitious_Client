@@ -10,6 +10,7 @@ import HomePage from "@/pages/HomePage";
 import LeaderBoardPage from "@/pages/LeaderBoardPage";
 import LoginPage from "@/pages/LoginPage";
 import SignUpPage from "@/pages/SignUpPage";
+import VolunteerPage from "@/pages/VolunteerPage";
 
 
 import { createBrowserRouter } from "react-router-dom";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path:"/leaderboard",
         element:<LeaderBoardPage/>,
+      },
+      {
+        path:"/volunteer",
+        element:<VolunteerPage/>,
       },
   
       {
