@@ -67,7 +67,7 @@ const DonateCard = () => {
                    rounded-full
                    text-base text-body-color
                    font-medium
-                   hover:border-primary hover:bg-primary hover:text-white
+                   hover:border-primary hover:bg-primary text-white
                    transition
                    cursor-pointer
                    "

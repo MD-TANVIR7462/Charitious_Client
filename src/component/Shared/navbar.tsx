@@ -4,19 +4,19 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Codesandbox } from "lucide-react";
 import toast from "react-hot-toast";
+import { ModeToggle } from "./ModeToggle";
 
-const Navbar = () => {
+const Navbar = ({setTheme}) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const accessToken = useAppSelector(userCurrentToken);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
 
   const handleLogout = () => {
     dispatch(logOut());
     toast.success("Log Out successfully & Returned Home");
-    navigate('/')
-
+    navigate("/");
   };
 
   const toggleMenu = () => {
@@ -71,11 +71,11 @@ const Navbar = () => {
               </a>
             </Link>
 
-                <Link to="/relief-goods">
-                  <a href="" className="block px-3 py-2" aria-current="page">
-                    All Relief
-                  </a>
-                </Link>
+            <Link to="/relief-goods">
+              <a href="" className="block px-3 py-2" aria-current="page">
+                All Relief
+              </a>
+            </Link>
             {!accessToken ? (
               <>
                 <Link to="/login">
@@ -86,7 +86,6 @@ const Navbar = () => {
               </>
             ) : (
               <>
-             
                 <Link to="/dashboard">
                   <a href="#" className="block px-3 py-2">
                     Dashboard
@@ -98,7 +97,10 @@ const Navbar = () => {
                   </a>
                 </li>
               </>
+              
             )}
+
+<ModeToggle setTheme={setTheme} ></ModeToggle>
           </ul>
         </div>
       </div>
