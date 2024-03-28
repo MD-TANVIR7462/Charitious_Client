@@ -5,9 +5,18 @@ const VolunteerPage = () => {
     <section className="">
       <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
         <div>
-          <h2 className="text-xl font-bold tracking-tight text-center sm:text-4xl text-white ">
-            Wants To Join with us as a volunteer?
-          </h2>
+          <div className="mb-4 md:mb-9 ">
+            <div className="mx-auto w-full lg:mx-0 mb-2">
+              <h2 className="text-3xl  tracking-tight text-white sm:text-4xl ">
+                Join Us As A volunteer ?
+              </h2>
+              <div className="mt-2">
+                <span className="inline-block w-40 h-1 rounded-full bg-purple-500 "></span>
+                <span className="inline-block w-5 h-1 ml-1 rounded-full bg-purple-500 "></span>
+                <span className="inline-block w-2 h-1 ml-1 rounded-full bg-purple-500 "></span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
           <div>
@@ -236,10 +245,21 @@ const VolunteerPage = () => {
           </div>
         </div>
       </div>
- <div className="my-12  w-[92%] mx-auto">
- <p className="text-white text-md text-center sm:text-start sm:text-xl md:text-3xl "> Join our volunteer team by Submit Details</p>
-      <VolunteerForm/>
- </div>
+      <div className="my-12  w-[92%] mx-auto">
+        <div className="mb-4 md:mb-9 ">
+          <div className="mx-auto w-full lg:mx-0 mb-2">
+            <h2 className="text-3xl  tracking-tight text-white sm:text-4xl ">
+              Join Our Team
+            </h2>
+            <div className="mt-2">
+              <span className="inline-block w-40 h-1 rounded-full bg-purple-500 "></span>
+              <span className="inline-block w-5 h-1 ml-1 rounded-full bg-purple-500 "></span>
+              <span className="inline-block w-2 h-1 ml-1 rounded-full bg-purple-500 "></span>
+            </div>
+          </div>
+        </div>
+        <VolunteerForm />
+      </div>
     </section>
   );
 };

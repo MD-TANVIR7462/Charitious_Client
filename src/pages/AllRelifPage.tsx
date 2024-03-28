@@ -13,15 +13,23 @@ type TDonation = {
 const AllRelifPage = () => {
   const { data } = useGetDonationQuery(undefined);
 
-if(!data){
-  return <LoaderComponent></LoaderComponent>
-}
+  if (!data) {
+    return <LoaderComponent></LoaderComponent>;
+  }
   return (
     <section className="my-16 ">
-      <h1 className="text-4xl font-semibold leading-9 text-center text-gray-300 dark:text-gray-50  mb-8">
-        Meet Our Relief Goods
-      </h1>
+   
       <div className="w-[90%] mx-auto">
+      <div className="mx-auto w-full lg:mx-0 mb-2">
+        <h2 className="text-3xl  tracking-tight text-white sm:text-4xl ">
+          Meet Our Relief Goods
+        </h2>
+        <div className="mt-2">
+          <span className="inline-block w-40 h-1 rounded-full bg-purple-500 "></span>
+          <span className="inline-block w-5 h-1 ml-1 rounded-full bg-purple-500 "></span>
+          <span className="inline-block w-2 h-1 ml-1 rounded-full bg-purple-500 "></span>
+        </div>
+      </div>
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8  p-4 ">
           {data?.map((SingleDonation: TDonation) => (
             <div key={SingleDonation._id} className="w-full  shadow-lg ">
@@ -55,7 +63,8 @@ if(!data){
                     Category : {SingleDonation?.Category}
                     <p>Price :{SingleDonation?.Amount} </p>
                   </p>
-                  <Link to={`/relief-goods/${SingleDonation?._id}`}
+                  <Link
+                    to={`/relief-goods/${SingleDonation?._id}`}
                     className="
                    inline-block
                    py-2
@@ -77,7 +86,6 @@ if(!data){
           ))}
         </div>
       </div>
-
     </section>
   );
 };

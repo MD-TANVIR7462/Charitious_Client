@@ -1,4 +1,6 @@
-import { Mail } from "lucide-react";
+import AboutFeatures from "@/component/Ui/AboutFeatures";
+import AboutImage from "@/component/Ui/AboutImage";
+
 
 const AboutUSpage = () => {
   const VolunTeerData = [
@@ -81,7 +83,7 @@ const AboutUSpage = () => {
             >
               {VolunTeerData?.map((volunteer, index) => (
                 <div key={index}>
-                  <div className="group relative m-0 flex h-72  rounded-xl ring-gray-900/5 sm:mx-auto  ">
+                  <div className="group relative m-0 flex h-72 shadow-2xl  rounded-xl ring-gray-900/5 sm:mx-auto  ">
                     <div className="z-10 h-full w-full overflow-hidden rounded-xl border border-purple-500  opacity-80 transition duration-300 ease-in-out group-hover:opacity-100  dark:opacity-70">
                       <img
                         src={volunteer.image}
@@ -110,6 +112,8 @@ const AboutUSpage = () => {
           </p>
         </div>
       </div>
+      <AboutFeatures/>
+      <AboutImage></AboutImage>
     </div>
   );
 };
