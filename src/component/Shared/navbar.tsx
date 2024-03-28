@@ -6,7 +6,7 @@ import { Codesandbox } from "lucide-react";
 import toast from "react-hot-toast";
 import { ModeToggle } from "./ModeToggle";
 
-const Navbar = ({setTheme}) => {
+const Navbar = ({ setTheme }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const accessToken = useAppSelector(userCurrentToken);
   const navigate = useNavigate();
@@ -97,10 +97,11 @@ const Navbar = ({setTheme}) => {
                   </a>
                 </li>
               </>
-              
             )}
 
-<ModeToggle setTheme={setTheme} ></ModeToggle>
+            <li className="ml-auto md:ml-0 ">
+            <ModeToggle setTheme={setTheme}></ModeToggle>
+            </li>
           </ul>
         </div>
       </div>

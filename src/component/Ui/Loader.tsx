@@ -1,6 +1,6 @@
 const LoaderComponent = () => {
    return (
-      <div className="flex items-center justify-center w-full h-[100vh] text-gray-900 dark:text-gray-100 dark:bg-gray-950">
+      <div className="flex items-center justify-center w-full h-[100vh] text-gray-100 ">
       <div>
          <h1 className="text-xl md:text-7xl font-bold flex items-center">L<svg stroke="currentColor" fill="currentColor" strokeWidth="0"
                viewBox="0 0 24 24" className="animate-spin" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
