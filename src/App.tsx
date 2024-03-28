@@ -15,11 +15,11 @@ function App() {
 
   return (
     <div
-      className={`bg-gradient-to-bl ${
-        theme === "system" && "from-[#09203F] to-[#537895]"
+      className={`${
+        theme === "system" && "bg-gradient-to-bl  from-[#09203F] to-[#537895]"
       } 
-        ${theme === "dark" && "from-[#1e0123] to-[#000000]"} 
-        ${theme === "light" && "from-[#42275a] to-[#734b6d]"} 
+        ${theme === "dark" && "bg-gradient-to-bl  from-[#1e0123] to-[#000000]"} 
+        ${theme === "light" && "bg-gradient-to-l  from-[#42275a] to-[#734b6d]"} 
       
       
       `}
@@ -30,3 +30,4 @@ function App() {
 }
 
 export default App;
+// from-[#42275a] to-[#734b6d]

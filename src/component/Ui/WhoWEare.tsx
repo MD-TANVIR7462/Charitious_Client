@@ -1,11 +1,11 @@
 const WhoWEare = () => {
   return (
-    <section className="bg-purple-200 dark:bg-gray-900">
+    <section className=" bg-violet-200">
       <div className="container px-6 py-10 mx-auto">
         <div className="lg:flex lg:items-center">
           <div className="w-full space-y-12 lg:w-1/2 ">
             <div>
-              <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
+              <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
                 explore our <br /> awesome Works
               </h1>
 
@@ -17,7 +17,7 @@ const WhoWEare = () => {
             </div>
 
             <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
@@ -35,18 +35,20 @@ const WhoWEare = () => {
               </span>
 
               <div className="mt-4 md:mx-4 md:mt-0">
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
+                <h1 className="text-2xl font-semibold text-gray-700 capitalize ">
                   Secure Donation Processing
                 </h1>
 
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                Implement a secure payment gateway to process donations safely, ensuring the confidentiality of donors' personal and financial information.
+                <p className="mt-3 text-gray-500 ">
+                  Implement a secure payment gateway to process donations
+                  safely, ensuring the confidentiality of donors' personal and
+                  financial information.
                 </p>
               </div>
             </div>
 
             <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4  ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
@@ -64,18 +66,20 @@ const WhoWEare = () => {
               </span>
 
               <div className="mt-4 md:mx-4 md:mt-0">
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
-                Recurring Donations:
+                <h1 className="text-2xl font-semibold text-gray-700 capitalize ">
+                  Recurring Donations:
                 </h1>
 
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                Allow donors to set up recurring donations on a weekly, monthly, or annual basis, making it convenient for them to support causes over time.
+                <p className="mt-3 text-gray-500 ">
+                  Allow donors to set up recurring donations on a weekly,
+                  monthly, or annual basis, making it convenient for them to
+                  support causes over time.
                 </p>
               </div>
             </div>
 
             <div className="md:flex md:items-start md:-mx-4">
-              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+              <span className="inline-block p-2 text-purple-500 bg-purple-100 rounded-xl md:mx-4 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
@@ -99,12 +103,14 @@ const WhoWEare = () => {
               </span>
 
               <div className="mt-4 md:mx-4 md:mt-0">
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">
-                User Authentication and Profiles:
+                <h1 className="text-2xl font-semibold text-gray-700 capitalize ">
+                  User Authentication and Profiles:
                 </h1>
 
-                <p className="mt-3 text-gray-500 dark:text-gray-300">
-                Allow users to create accounts and profiles where they can track their donation history, manage recurring donations, and update their personal information.
+                <p className="mt-3 text-gray-500 ">
+                  Allow users to create accounts and profiles where they can
+                  track their donation history, manage recurring donations, and
+                  update their personal information.
                 </p>
               </div>
             </div>
