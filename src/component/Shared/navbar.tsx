@@ -30,7 +30,7 @@ const Navbar = ({ setTheme }:any) => {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <h1 className="flex items-center gap-2 text-2xl font-bold">
+          <h1 className="flex items-center gap-2 text-2xl font-bold md:hidden lg:flex">
             <Codesandbox size={40} /> Charitious
           </h1>
         </Link>

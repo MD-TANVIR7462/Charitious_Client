@@ -86,7 +86,7 @@ const LeaderBoardPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="flex justify-center gap-0  md:gap-5 flex-wrap w-full">
+                <div className="flex justify-center gap-5 flex-wrap w-full">
                   {leaderboard?.map((singlProile, index) => (
                     <LeaderCard
                       singlProile={singlProile}
