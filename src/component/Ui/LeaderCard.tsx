@@ -11,7 +11,7 @@ const LeaderCard = ({ singlProile }: { singlProile: TProfile }) => {
     singlProile;
 
   return (
-    <div className=" font-sans leading-normal tracking-normal shadow-lg">
+    <div className=" font-sans leading-normal tracking-normal shadow-md shadow-blue-950 ">
       <div className="flex justify-center pt-10">
         <div className=" rounded-lg profile-card w-80   md:w-96 p-6">
           <div className="flex justify-center mb-4">

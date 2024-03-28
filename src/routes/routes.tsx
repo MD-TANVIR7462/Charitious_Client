@@ -1,6 +1,7 @@
 import App from "@/App";
 import DashBoard from "@/layout/Dashboard/DashBoard";
 import RouteGaurd from "@/layout/RouteGaurd";
+import AboutUSpage from "@/pages/AboutUSpage";
 import AddSupply from "@/pages/AdminPages/AddSupply";
 import AlllSupply from "@/pages/AdminPages/AlllSupply";
 import DashboardHome from "@/pages/AdminPages/DashboardHome";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:"/volunteer",
         element:<VolunteerPage/>,
+      },
+      {
+        path:"/about-us",
+        element:<AboutUSpage/>,
       },
   
       {

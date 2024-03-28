@@ -24,7 +24,7 @@ if(!data){
       <div className="w-[90%] mx-auto">
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8  p-4 ">
           {data?.map((SingleDonation: TDonation) => (
-            <div key={SingleDonation._id} className="w-full  shadow-2xl">
+            <div key={SingleDonation._id} className="w-full  shadow-lg ">
               <div className=" rounded-lg overflow-hidden mb-10">
                 <img
                   src={SingleDonation?.image}

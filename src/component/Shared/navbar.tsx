@@ -87,6 +87,11 @@ const Navbar = ({ setTheme }:any) => {
                 Leader Board
               </a>
             </Link>
+            <Link to="/about-us">
+              <a href="" className="block px-3 py-2" aria-current="page">
+              About Us
+              </a>
+            </Link>
             {!accessToken ? (
               <>
                 <Link to="/login">
