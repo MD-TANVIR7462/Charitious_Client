@@ -1,9 +1,11 @@
+import VolunteerForm from "@/component/Ui/VolunteerForm";
+
 const VolunteerPage = () => {
   return (
     <section className="">
       <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight text-center sm:text-4xl text-white ">
+          <h2 className="text-xl font-bold tracking-tight text-center sm:text-4xl text-white ">
             Wants To Join with us as a volunteer?
           </h2>
         </div>
@@ -234,6 +236,10 @@ const VolunteerPage = () => {
           </div>
         </div>
       </div>
+ <div className="my-12  w-[92%] mx-auto">
+ <p className="text-white text-md text-center sm:text-start sm:text-xl md:text-3xl "> Join our volunteer team by Submit Details</p>
+      <VolunteerForm/>
+ </div>
     </section>
   );
 };
