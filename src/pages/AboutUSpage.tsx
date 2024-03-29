@@ -1,66 +1,26 @@
 import AboutFeatures from "@/component/Ui/AboutFeatures";
 import AboutImage from "@/component/Ui/AboutImage";
-
+import LoaderComponent from "@/component/Ui/Loader";
+import { useGetVolunteerQuery } from "@/redux/api/api";
 
 const AboutUSpage = () => {
-  const VolunTeerData = [
-    {
-      name: "John Smith",
-      email: "john.smith@example.com",
-      phone: "+1234567890",
-      image:
-        "https://img.freepik.com/free-photo/businesspeople-office-meeting_23-2148908969.jpg",
-    },
-    {
-      name: "Alice Johnson",
-      email: "alice.johnson@example.com",
-      phone: "+1987654321",
-      image: "https://source.unsplash.com/random/800x600/?woman",
-    },
-    {
-      name: "Michael Brown",
-      email: "michael.brown@example.com",
-      phone: "+1122334455",
-      image: "https://source.unsplash.com/random/800x600/?man",
-    },
-    {
-      name: "Emily Wilson",
-      email: "emily.wilson@example.com",
-      phone: "+1567890123",
-      image: "https://source.unsplash.com/random/800x600/?woman",
-    },
-    {
-      name: "David Martinez",
-      email: "david.martinez@example.com",
-      phone: "+1432567890",
-      image: "https://source.unsplash.com/random/800x600/?man",
-    },
-    {
-      name: "Olivia Garcia",
-      email: "olivia.garcia@example.com",
-      phone: "+1654321897",
-      image: "https://source.unsplash.com/random/800x600/?woman",
-    },
-    {
-      name: "William Taylor",
-      email: "william.taylor@example.com",
-      phone: "+1789456123",
-      image: "https://source.unsplash.com/random/800x600/?man",
-    },
-    {
-      name: "Sophia Clark",
-      email: "sophia.clark@example.com",
-      phone: "+1876543219",
-      image: "https://source.unsplash.com/random/800x600/?woman",
-    },
-    {
-      name: "Sophia Clark",
-      email: "sophia.clark@example.com",
-      phone: "+1876543219",
-      image: "https://source.unsplash.com/random/800x600/?woman",
-    },
-  ];
+  const { data } = useGetVolunteerQuery(undefined);
+  const VolunTeerData = data;
 
+type Tvolunteer ={
+  _id: string,
+    name: string,
+    email:string ,
+    phone:string,
+    image:string 
+  
+
+}
+
+
+  if (!data) {
+    return <LoaderComponent />;
+  }
   return (
     <div>
       <div className=" py-4 sm:py-6 md:py-10 px-5 ">
@@ -81,8 +41,8 @@ const AboutUSpage = () => {
               role="list"
               className="mt-3 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5  mx-auto"
             >
-              {VolunTeerData?.map((volunteer, index) => (
-                <div key={index}>
+              {VolunTeerData?.map((volunteer:Tvolunteer) => (
+                <div key={volunteer?._id}>
                   <div className="group relative m-0 flex h-72 shadow-2xl  rounded-xl ring-gray-900/5 sm:mx-auto  ">
                     <div className="z-10 h-full w-full overflow-hidden rounded-xl border border-purple-500  opacity-80 transition duration-300 ease-in-out group-hover:opacity-100  dark:opacity-70">
                       <img
@@ -112,7 +72,7 @@ const AboutUSpage = () => {
           </p>
         </div>
       </div>
-      <AboutFeatures/>
+      <AboutFeatures />
       <AboutImage></AboutImage>
     </div>
   );

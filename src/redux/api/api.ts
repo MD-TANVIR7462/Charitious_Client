@@ -31,7 +31,7 @@ export const baseApi = createApi({
       invalidatesTags: ["donation"],
     }),
     updateDonation: builder.mutation({
-      query: ({ body, id }) => ({       
+      query: ({ body, id }) => ({
         url: `/update-donation/${id}`,
         method: "PUT",
         body,
@@ -68,9 +68,23 @@ export const baseApi = createApi({
       }),
       providesTags: ["donation"],
     }),
+    getVolunteer: builder.query({
+      query: () => ({
+        url: "/volunteer",
+        method: "GET",
+      }),
+      providesTags: ["donation"],
+    }),
 
 
-
+    addVolunteer: builder.mutation({
+      query: (data) => ({
+        url: "/createVolunteer",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["donation"],
+    }),
 
 
 
@@ -95,5 +109,7 @@ export const {
   useDeleteDonationMutation,
   useCreateUserMutation,
   useLoginUserMutation,
-  useGetLeaderboardQuery
+  useGetLeaderboardQuery,
+  useGetVolunteerQuery,
+  useAddVolunteerMutation
 } = baseApi;

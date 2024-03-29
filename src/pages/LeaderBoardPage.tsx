@@ -3,12 +3,21 @@ import LoaderComponent from "@/component/Ui/Loader";
 import { useGetLeaderboardQuery } from "@/redux/api/api";
 
 const LeaderBoardPage = () => {
-  const {data}=useGetLeaderboardQuery(undefined)
-  const leaderboard = data
+  const { data } = useGetLeaderboardQuery(undefined);
+  const leaderboard = data;
 
-if(!data){
-  return <LoaderComponent/>
-}
+  type Tleader = {
+    _id: string;
+    name: string;
+    profileImage: string;
+    donationsLastYear: number;
+    totalDonation: number;
+    month: number;
+  };
+
+  if (!data) {
+    return <LoaderComponent />;
+  }
 
   return (
     <>
@@ -30,10 +39,10 @@ if(!data){
                   </div>
                 </div>
                 <div className="flex justify-center gap-5 flex-wrap w-full">
-                  {leaderboard?.map((singlProile  , index) => (
+                  {leaderboard?.map((singlProile: Tleader) => (
                     <LeaderCard
                       singlProile={singlProile}
-                      key={index}
+                      key={singlProile?._id}
                     ></LeaderCard>
                   ))}
                 </div>
