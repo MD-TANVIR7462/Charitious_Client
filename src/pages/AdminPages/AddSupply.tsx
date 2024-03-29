@@ -23,7 +23,7 @@ const AddSupply = () => {
       Amount,
     };
 
-console.log(newData);
+
 try{
    addDonation(newData);
    toast.success("New Supply Created Successfully")

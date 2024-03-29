@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useAddVolunteerMutation } from "@/redux/api/api";
+import toast from "react-hot-toast";
+
 const VolunteerForm = () => {
+  const [addVolunteer] = useAddVolunteerMutation();
+
   const handleVolunteer = (e: any) => {
     e.preventDefault();
     const form = e.target;
@@ -9,9 +14,15 @@ const VolunteerForm = () => {
     const image = form.img.value;
 
     const volunteerData = { name, email, phone, image };
- form.reset()
+    try {
+      addVolunteer(volunteerData);
+      toast.success(`${name} Now You are a Volunteer `);
+      form.reset();
+    } catch (err) {
+      toast.error("Failed to create volunteer");
+      form.reset();
+    }
   };
-
   return (
     <form className="mt-4 sm:mt-6 md:mt-10" onSubmit={handleVolunteer}>
       <div className="grid gap-6 sm:grid-cols-2">

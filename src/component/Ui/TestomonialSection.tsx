@@ -1,62 +1,23 @@
+import { useGetTestimonialsQuery } from "@/redux/api/api";
 import Marquee from "react-fast-marquee";
+import LoaderComponent from "./Loader";
 
 const TestomonialSection = () => {
-  const allTestimonial = [
-    {
-      id: 21,
-      name: "Tajul islam",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 2,
-    },
-    {
-      id: 22,
-      name: "Hridoy Ahmed",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 4,
-    },
-    {
-      id: 23,
-      name: "Miftha Hossain",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 3,
-    },
-    {
-      id: 24,
-      name: "Lucifer",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 5,
-    },
-    {
-      id: 25,
-      name: "Sabeer alam",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 8,
-    },
-    {
-      id: 26,
-      name: "Mr.Jonathan",
-      image:
-        "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80",
-      review:
-        "This is a  great platform for donation. I really like this doing. Lot of people are included .They are always try to work best and giving lot of",
-      days: 10,
-    },
-  ];
+  const { data } = useGetTestimonialsQuery(undefined);
+  const allTestimonial = data;
+
+  type Ttestimonial = {
+    _id: string;
+    name: string;
+    image: string;
+    review: string;
+    days: string;
+  };
+
+  if(!data){
+    return <LoaderComponent/>
+  }
+
   return (
     <section className="mt-14">
       <h1 className="text-2xl md:text-4xl font-semibold leading-9 text-center   text-gray-300 ">
@@ -64,16 +25,16 @@ const TestomonialSection = () => {
       </h1>
 
       <Marquee>
-        {allTestimonial?.map((SigleTestimonial) => (
+        {allTestimonial?.map((SigleTestimonial:Ttestimonial) => (
           <div
-            key={SigleTestimonial.id}
+            key={SigleTestimonial?._id}
             className=" flex shadow-xl my-6 md:my-12 flex-col w-[92%] max-w-lg p-6 mx-auto divide-y rounded-md  "
           >
             <div className="flex justify-between p-4">
               <div className="flex space-x-4">
                 <div>
                   <img
-                    src="https://source.unsplash.com/100x100/?portrait"
+                    src={SigleTestimonial?.image}
                     alt=""
                     className="object-cover w-12 h-12 rounded-full"
                   />

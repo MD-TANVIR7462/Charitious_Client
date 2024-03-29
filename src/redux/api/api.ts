@@ -85,6 +85,23 @@ export const baseApi = createApi({
       }),
       invalidatesTags: ["donation"],
     }),
+    getTestimonials: builder.query({
+      query: () => ({
+        url: "/testimonials",
+        method: "GET",
+      }),
+      providesTags: ["donation"],
+    }),
+
+
+    addTestimonials: builder.mutation({
+      query: (data) => ({
+        url: "/createtestimonials",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["donation"],
+    }),
 
 
 
@@ -111,5 +128,7 @@ export const {
   useLoginUserMutation,
   useGetLeaderboardQuery,
   useGetVolunteerQuery,
-  useAddVolunteerMutation
+  useAddVolunteerMutation,
+  useAddTestimonialsMutation,
+  useGetTestimonialsQuery
 } = baseApi;
