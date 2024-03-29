@@ -3,6 +3,7 @@ import DashBoard from "@/layout/Dashboard/DashBoard";
 import RouteGaurd from "@/layout/RouteGaurd";
 import AboutUSpage from "@/pages/AboutUSpage";
 import AddSupply from "@/pages/AdminPages/AddSupply";
+import AddTestimoniaPage from "@/pages/AdminPages/AddTestimoniaPage";
 import AlllSupply from "@/pages/AdminPages/AlllSupply";
 import DashboardHome from "@/pages/AdminPages/DashboardHome";
 import AllRelifPage from "@/pages/AllRelifPage";
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
       {
         path:"/dashboard/create-supply",
         element:<AddSupply/>
+      },
+      {
+        path:"/dashboard/add-testimonial",
+        element:<AddTestimoniaPage/>
       },
     ]
   }

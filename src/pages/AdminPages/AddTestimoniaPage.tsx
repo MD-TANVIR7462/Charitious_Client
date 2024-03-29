@@ -1,58 +1,52 @@
-import { useAddDonationMutation } from "@/redux/api/api";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useAddTestimonialsMutation } from "@/redux/api/api";
 import toast from "react-hot-toast";
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
-const AddSupply = () => {
-
-   const [addDonation] = useAddDonationMutation();
+const AddTestimoniaPage = () => {
+  const [addTestimonial] = useAddTestimonialsMutation();
 
   const handleAddSuppy = (e: any) => {
     e.preventDefault();
     const form = e.target;
-    const title = form.title.value;
+    const name = form.title.value;
     const image = form.img.value;
-    const Category = form.category.value;
-    const description = form.description.value;
-    const Amount = form.amount.value;
+    const review = form.description.value;
+    const days = form.amount.value;
 
     const newData = {
-      title,
+      name,
       image,
-      Category,
-      description,
-      Amount,
+      review,
+      days,
     };
+    console.log(newData);
 
-
-try{
-   addDonation(newData);
-   toast.success("New Supply Created Successfully")
-   form.reset()
-
-}
-catch(err){
-   toast.error("Facing some Error While Processing")
-   form.reset()
-}
-
+    try {
+      addTestimonial(newData);
+      toast.success("Testimonial Created Successfully");
+      form.reset();
+    } catch (err) {
+      toast.error("Facing some Error While Processing");
+      form.reset();
+    }
   };
   return (
     <form onSubmit={handleAddSuppy}>
       <div className=" md:px-20 pt-2  xl:pt-6">
         <div className=" bg-purple-200 rounded-md px-6 py-10 max-w-2xl mx-auto">
           <h1 className="text-center text-2xl font-bold text-purple-500 mb-10">
-            ADD SUPPLY
+            ADD TESTIMONIAL
           </h1>
           <div className="space-y-4">
             <div>
               <label htmlFor="title" className="text-lx font-serif">
-                Title:
+                Name:
               </label>
               <input
                 type="text"
                 name="title"
                 required
-                placeholder="title"
+                placeholder="Name"
                 id="title"
                 className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md"
               />
@@ -62,7 +56,7 @@ catch(err){
                 htmlFor="description"
                 className="block mb-2 text-lg font-serif"
               >
-                Description:
+                Message:
               </label>
               <textarea
                 id="description"
@@ -75,26 +69,13 @@ catch(err){
               ></textarea>
             </div>
             <div>
-              <label htmlFor="Category" className="text-lx font-serif">
-                Category:
-              </label>
-              <input
-                type="text"
-                required
-                placeholder="Category"
-                id="Category"
-                name="category"
-                className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md"
-              />
-            </div>
-            <div>
               <label htmlFor="email" className="text-lx font-serif mr-1">
-                Amount:
+                Ratings:
               </label>
               <input
                 type="number"
                 required
-                placeholder="Amount"
+                placeholder="Ratings"
                 id="amount"
                 name="amount"
                 className="ml-2 outline-none py-1 px-2 text-md border-2 rounded-md"
@@ -117,7 +98,7 @@ catch(err){
               type="submit"
               className=" px-6 py-2 mx-auto block rounded-md text-lg font-semibold text-purple-500 border border-purple-500 bg-purple-100   "
             >
-              ADD SUPPLY
+              ADD TESTIMONIAL
             </button>
           </div>
         </div>
@@ -126,4 +107,4 @@ catch(err){
   );
 };
 
-export default AddSupply;
+export default AddTestimoniaPage;

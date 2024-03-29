@@ -114,6 +114,17 @@ const DashBoard = () => {
                 <span className="text-sm font-medium  ">Add Supply</span>
               </Link>
             </li>
+            <li>
+              <Link
+                to={'/dashboard/add-testimonial'}
+                className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              >
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                  <i className="bx bx-drink"></i>
+                </span>
+                <span className="text-sm font-medium  ">Add Testimonial</span>
+              </Link>
+            </li>
             <div className="border-b border-purple-500 w-[83%] mx-auto " />
             <li>
               <Link
@@ -137,6 +148,51 @@ const DashBoard = () => {
                 <span className="text-sm font-medium">ALl Relif</span>
               </Link>
             </li>
+            <li>
+              <Link
+                to={"/volunteer"}
+                className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              >
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                  <i className="bx bx-chat"></i>
+                </span>
+                <span className="text-sm font-medium">Volunteer</span>
+              </Link>
+            </li>
+                 <li>
+              <Link
+                to={"/about-us"}
+                className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              >
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                  <i className="bx bx-chat"></i>
+                </span>
+                <span className="text-sm font-medium">About Us</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/leaderboard"}
+                className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              >
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                  <i className="bx bx-chat"></i>
+                </span>
+                <span className="text-sm font-medium">Leaderboard</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/community"}
+                className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+              >
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                  <i className="bx bx-chat"></i>
+                </span>
+                <span className="text-sm font-medium">Community</span>
+              </Link>
+            </li>
+       
           </ul>
         </div>
       )}

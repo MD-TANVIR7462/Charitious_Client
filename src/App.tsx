@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import MainLayout from "./layout/MainLayout";
 
+
 type Theme = "dark" | "light" | "system";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       `}
     >
       <MainLayout setTheme={setTheme}></MainLayout>
+  
     </div>
   );
 }

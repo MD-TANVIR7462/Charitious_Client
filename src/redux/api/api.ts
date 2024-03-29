@@ -96,7 +96,7 @@ export const baseApi = createApi({
 
     addTestimonials: builder.mutation({
       query: (data) => ({
-        url: "/createtestimonials",
+        url: "/create-testimonials",
         method: "POST",
         body: data,
       }),
