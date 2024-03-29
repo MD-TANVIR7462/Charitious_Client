@@ -7,7 +7,7 @@ import { Codesandbox } from "lucide-react";
 import toast from "react-hot-toast";
 import { ModeToggle } from "./ModeToggle";
 
-const Navbar = ({ setTheme }:any) => {
+const Navbar = ({ setTheme }: any) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const accessToken = useAppSelector(userCurrentToken);
   const navigate = useNavigate();
@@ -67,35 +67,40 @@ const Navbar = ({ setTheme }:any) => {
         >
           <ul className="flex flex-col p-4 mt-4 font-medium text-white border md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             <Link to={"/"}>
-              <a href="#" className="block px-3 py-2" aria-current="page">
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
                 Home
+              </a>
+            </Link>
+            <Link to={"/community"}>
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
+                Community
               </a>
             </Link>
 
             <Link to="/relief-goods">
-              <a href="" className="block px-3 py-2" aria-current="page">
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
                 All Relief
               </a>
             </Link>
             <Link to="/volunteer">
-              <a href="" className="block px-3 py-2" aria-current="page">
-              Volunteer
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
+                Volunteer
               </a>
             </Link>
             <Link to="/leaderboard">
-              <a href="" className="block px-3 py-2" aria-current="page">
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
                 Leader Board
               </a>
             </Link>
             <Link to="/about-us">
-              <a href="" className="block px-3 py-2" aria-current="page">
-              About Us
+              <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" aria-current="page">
+                About Us
               </a>
             </Link>
             {!accessToken ? (
               <>
                 <Link to="/login">
-                  <a href="" className="block px-3 py-2">
+                  <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2">
                     Login
                   </a>
                 </Link>
@@ -103,12 +108,12 @@ const Navbar = ({ setTheme }:any) => {
             ) : (
               <>
                 <Link to="/dashboard">
-                  <a href="#" className="block px-3 py-2">
+                  <a href="#" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2">
                     Dashboard
                   </a>
                 </Link>
                 <li>
-                  <a href="" className="block px-3 py-2" onClick={handleLogout}>
+                  <a href="" className="block px-0  text-md md:text-sm lg:text-[15px] lg:px-3 py-2" onClick={handleLogout}>
                     Logout
                   </a>
                 </li>
@@ -116,7 +121,7 @@ const Navbar = ({ setTheme }:any) => {
             )}
 
             <li className="ml-auto md:ml-0 ">
-            <ModeToggle setTheme={setTheme}></ModeToggle>
+              <ModeToggle setTheme={setTheme}></ModeToggle>
             </li>
           </ul>
         </div>

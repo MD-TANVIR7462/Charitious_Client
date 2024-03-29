@@ -7,6 +7,7 @@ import AddTestimoniaPage from "@/pages/AdminPages/AddTestimoniaPage";
 import AlllSupply from "@/pages/AdminPages/AlllSupply";
 import DashboardHome from "@/pages/AdminPages/DashboardHome";
 import AllRelifPage from "@/pages/AllRelifPage";
+import CommunityPage from "@/pages/CommunityPage";
 import DetailsPage from "@/pages/DetailsPage";
 import HomePage from "@/pages/HomePage";
 import LeaderBoardPage from "@/pages/LeaderBoardPage";
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:"/about-us",
         element:<AboutUSpage/>,
+      },
+      {
+        path:"/community",
+        element:<CommunityPage/>,
       },
   
       {
