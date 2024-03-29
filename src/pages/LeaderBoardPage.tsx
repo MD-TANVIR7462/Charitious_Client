@@ -1,71 +1,14 @@
 import LeaderCard from "@/component/Ui/LeaderCard";
+import LoaderComponent from "@/component/Ui/Loader";
+import { useGetLeaderboardQuery } from "@/redux/api/api";
 
 const LeaderBoardPage = () => {
-  const leaderboard = [
-    {
-      name: "John Doe",
-      profileImage: "https://source.unsplash.com/random/800x600/?person",
-      donationsLastYear: 25,
-      totalDonation: 1500,
-      month: 15,
-    },
-    {
-      name: "Jane Smith",
-      profileImage: "https://source.unsplash.com/random/800x600/?portrait",
-      donationsLastYear: 13,
-      totalDonation: 750,
-      month: 12,
-    },
-    {
-      name: "Alice Johnson",
-      profileImage: "https://source.unsplash.com/random/800x600/?woman",
-      donationsLastYear: 40,
-      totalDonation: 2000,
-      month: 17,
-    },
-    {
-      name: "Bob Brown",
-      profileImage: "https://source.unsplash.com/random/800x600/?man",
-      donationsLastYear: 30,
-      totalDonation: 1800,
-      month: 7,
-    },
-    {
-      name: "Emily Wilson",
-      profileImage: "https://source.unsplash.com/random/800x600/?girl",
-      donationsLastYear: 20,
-      totalDonation: 1200,
-      month: 11,
-    },
-    {
-      name: "Michael Lee",
-      profileImage: "https://source.unsplash.com/random/800x600/?boy",
-      donationsLastYear: 35,
-      totalDonation: 2100,
-      month: 17,
-    },
-    {
-      name: "Sarah Clark",
-      profileImage: "https://source.unsplash.com/random/800x600/?people",
-      donationsLastYear: 18,
-      totalDonation: 900,
-      month: 13,
-    },
-    {
-      name: "David Garcia",
-      profileImage: "https://source.unsplash.com/random/800x600/?face",
-      donationsLastYear: 28,
-      totalDonation: 1600,
-      month: 9,
-    },
-    {
-      name: "Olivia Martinez",
-      profileImage: "https://source.unsplash.com/random/800x600/?profile",
-      donationsLastYear: 15,
-      totalDonation: 1000,
-      month: 15,
-    },
-  ];
+  const {data}=useGetLeaderboardQuery(undefined)
+  const leaderboard = data
+
+if(!data){
+  return <LoaderComponent/>
+}
 
   return (
     <>
@@ -87,7 +30,7 @@ const LeaderBoardPage = () => {
                   </div>
                 </div>
                 <div className="flex justify-center gap-5 flex-wrap w-full">
-                  {leaderboard?.map((singlProile, index) => (
+                  {leaderboard?.map((singlProile  , index) => (
                     <LeaderCard
                       singlProile={singlProile}
                       key={index}

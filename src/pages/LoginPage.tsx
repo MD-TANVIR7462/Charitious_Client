@@ -55,6 +55,7 @@ const LoginPage = () => {
                 className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-4 sm:px-12  py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
                 type="email"
                 name="name"
+                required
                 placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -65,6 +66,7 @@ const LoginPage = () => {
                 className="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-4 sm:px-12 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"
                 type="Password"
                 name="name"
+                required
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
               />
