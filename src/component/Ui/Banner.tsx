@@ -10,7 +10,10 @@ const Banner = () => {
       </div>
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-          <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-300  sm:text-4xl md:text-5xl sm:leading-none  ">
+          <h2
+            className="mb-5 font-sans text-3xl animate-fade-up animate-ease-in-out animate-duration-1000
+ font-bold tracking-tight text-gray-300  sm:text-4xl md:text-5xl sm:leading-none  "
+          >
             Everything you
             <br className="hidden md:block " />
             can imagine{" "}
@@ -18,11 +21,11 @@ const Banner = () => {
               is real
             </span>
           </h2>
-          <p className="pr-5 mb-5 text-base text-gray-300  md:text-lg">
+          <p className="pr-5 mb-5 text-base text-gray-300  md:text-lg animate-fade-up animate-ease-in-out animate-duration-1000 animate-delay-[600ms]">
             Support our cause! Donate now to make a difference. Every
             contribution counts
           </p>
-          <div className="flex items-center">
+          <div className="flex items-center animate-jump-in animate-duration-700 animate-delay-[700ms]">
             <a className="relative inline-block px-4 py-2 font-medium group cursor-pointer">
               <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
               <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>

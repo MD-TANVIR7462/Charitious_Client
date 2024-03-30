@@ -13,9 +13,9 @@ const TestomonialSection = () => {
     review: string;
     days: string;
   };
-console.log(data);
-  if(!data){
-    return <LoaderComponent/>
+  console.log(data);
+  if (!data) {
+    return <LoaderComponent />;
   }
 
   return (
@@ -25,10 +25,10 @@ console.log(data);
       </h1>
 
       <Marquee>
-        {allTestimonial?.map((SigleTestimonial:Ttestimonial) => (
+        {allTestimonial?.map((SigleTestimonial: Ttestimonial) => (
           <div
             key={SigleTestimonial?._id}
-            className=" flex shadow-xl my-6 md:my-12 flex-col w-[92%] max-w-lg p-6 mx-auto divide-y rounded-md  "
+            className=" flex shadow-xl my-6 md:my-12 flex-col w-[92%] max-w-lg p-6 mx-auto divide-y rounded-md   "
           >
             <div className="flex justify-between p-4">
               <div className="flex space-x-4">

@@ -1,13 +1,21 @@
+
+
+
+
 const GallerySection = () => {
+
+
   return (
-    <div className="flex justify-center items-center">
+    <div  className="flex justify-center items-center">
       <div className="2xl:mx-auto 2xl:container lg:px-20 lg:py-16 md:py-12 md:px-6 py-9 px-4 w-96 sm:w-auto">
         <div role="main" className="flex flex-col items-center justify-center">
           <h1 className="text-2xl md:text-4xl font-semibold leading-9 text-center text-gray-300 dark:text-gray-50">
             This Week Donation
           </h1>
         </div>
-        <div className="lg:flex items-stretch md:mt-12 mt-8">
+        <div
+     
+       className="lg:flex items-stretch md:mt-12 mt-8">
           <div className="lg:w-1/2">
             <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">
               <div className="sm:w-1/2 relative">
@@ -22,12 +30,7 @@ const GallerySection = () => {
                     <p className="text-base leading-4 text-white mt-2">
                       Dive into minimalism
                     </p>
-                    <a
-                  
-                      className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                    >
-              
-                    </a>
+                    <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                   </div>
                 </div>
                 <img
@@ -48,12 +51,7 @@ const GallerySection = () => {
                     <p className="text-base leading-4 text-white mt-2">
                       Dive into minimalism
                     </p>
-                    <a
-                 
-                      className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                    >
-              
-                    </a>
+                    <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                   </div>
                 </div>
                 <img
@@ -75,12 +73,7 @@ const GallerySection = () => {
                   <p className="text-base leading-4 text-white mt-2">
                     Dive into minimalism
                   </p>
-                  <a
-                  
-                    className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                  >
-             
-                  </a>
+                  <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                 </div>
               </div>
               <img
@@ -108,12 +101,7 @@ const GallerySection = () => {
                   <p className="text-base leading-4 text-white mt-2">
                     Dive into minimalism
                   </p>
-                  <a
-                   
-                    className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                  >
-               
-                  </a>
+                  <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                 </div>
               </div>
               <img
@@ -140,12 +128,7 @@ const GallerySection = () => {
                     <p className="text-base leading-4 text-white mt-2">
                       Dive into minimalism
                     </p>
-                    <a
-                    
-                      className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                    >
-                
-                    </a>
+                    <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                   </div>
                 </div>
                 <img
@@ -166,12 +149,7 @@ const GallerySection = () => {
                     <p className="text-base leading-4 text-white mt-2">
                       Dive into minimalism
                     </p>
-                    <a
-                      
-                      className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
-                    >
-               
-                    </a>
+                    <a className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"></a>
                   </div>
                 </div>
                 <img
@@ -182,10 +160,16 @@ const GallerySection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div >
       </div>
     </div>
   );
 };
 
 export default GallerySection;
+
+
+
+
+ 
+

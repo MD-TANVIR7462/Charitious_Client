@@ -24,7 +24,7 @@ const CommunityCard = ({ sigleFeedback }: { sigleFeedback: Tfeedback }) => {
         <div className="relative flex ">
           <img
             src="https://icons.iconarchive.com/icons/diversity-avatars/avatars/256/charlie-chaplin-icon.png"
-            className="relative rounded-lg -top-8 -mb-4  border bg-gray-200 h-20 w-20"
+            className="relative rounded-lg -top-8 -mb-4  border  bg-rose-950 bg-opacity-20 backdrop-blur-2xl h-20 w-20"
             alt=""
             loading="lazy"
           />
