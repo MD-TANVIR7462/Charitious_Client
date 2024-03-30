@@ -76,7 +76,6 @@ export const baseApi = createApi({
       providesTags: ["donation"],
     }),
 
-
     addVolunteer: builder.mutation({
       query: (data) => ({
         url: "/createVolunteer",
@@ -93,7 +92,6 @@ export const baseApi = createApi({
       providesTags: ["donation"],
     }),
 
-
     addTestimonials: builder.mutation({
       query: (data) => ({
         url: "/create-testimonials",
@@ -103,16 +101,22 @@ export const baseApi = createApi({
       invalidatesTags: ["donation"],
     }),
 
+    addFeedback: builder.mutation({
+      query: (data) => ({
+        url: "/create-feedback",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["donation"],
+    }),
 
-
-
-
-
-
-
-
-
-
+    getFeedback: builder.query({
+      query: () => ({
+        url: "/feedback",
+        method: "GET",
+      }),
+      providesTags: ["donation"],
+    }),
   }),
 
   tagTypes: ["donation"],
@@ -130,5 +134,7 @@ export const {
   useGetVolunteerQuery,
   useAddVolunteerMutation,
   useAddTestimonialsMutation,
-  useGetTestimonialsQuery
+  useGetTestimonialsQuery,
+  useAddFeedbackMutation,
+  useGetFeedbackQuery
 } = baseApi;
