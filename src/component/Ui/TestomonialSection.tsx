@@ -13,7 +13,7 @@ const TestomonialSection = () => {
     review: string;
     days: string;
   };
-  console.log(data);
+
   if (!data) {
     return <LoaderComponent />;
   }

@@ -146,7 +146,7 @@ else{
                           <DialogTitle>Edit {SingleData?.title}</DialogTitle>
                         </DialogHeader>
                         <form
-                          onSubmit={(e) => handleEdit(e, SingleData?._id)}
+                          onSubmit={(e)=>handleEdit(e,SingleData?._id)}
                           className="grid gap-4 py-4"
                         >
                           <div className="grid grid-cols-4 items-center gap-4">
@@ -180,14 +180,14 @@ else{
                               className="col-span-3"
                             />
                           </div>
-                          <DialogTrigger asChild>
+                          {/* <DialogTrigger asChild> */}
                             <Button
                               type="submit"
                               className="flex justify-end border border-purple-500 w-fit text-purple-500 ml-auto"
                             >
                               Save changes
                             </Button>
-                          </DialogTrigger>
+                          {/* </DialogTrigger> */}
                         </form>
                       </DialogContent>
                     </Dialog>
