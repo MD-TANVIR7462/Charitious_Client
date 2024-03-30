@@ -61,8 +61,8 @@ const router = createBrowserRouter([
         element: <DetailsPage />,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/api/v1/donation/${params?.id}`
-            // `https://charitious-server.vercel.app/api/v1/donation/${params?.id}`
+            // `http://localhost:5000/api/v1/donation/${params?.id}`
+            `https://charitious-server.vercel.app/api/v1/donation/${params?.id}`
           ),
       },
       

@@ -77,7 +77,7 @@ const LoginPage = () => {
                 New Here ?{" "}
                 <Link
                   to={"/register"}
-                  className="cursor-pointer hover:text-purple-500"
+                  className="cursor-pointer hover:text-purple-700 text-purple-500 "
                 >
                   Resister
                 </Link>
